@@ -1,4 +1,5 @@
 import sympy as sp
+import matplotlib.pyplot as plt
 #criando as funções de custo total e custo médio
 def custo_total(x,cf,cv):
     return cf + cv * x
@@ -25,3 +26,13 @@ else:
     for x_teste in quantidades:
         resultado = custo_medio(x_teste, cf, cv)
         print(f"Quantidade: {x_teste:>7}, Custo Médio: {resultado:.2f}")
+
+    x_valores = list(range(1, 5001))
+    y_valores = [custo_medio(qtd, cf, cv) for qtd in x_valores]
+    plt.plot(x_valores, y_valores, label="Custo médio")
+    plt.axhline(y=cv, color="red", linestyle="--", label="Custo variável (limite)")
+    plt.xlabel("Quantidade produzida (x)")
+    plt.ylabel("Custo médio")
+    plt.title("Convergência do custo médio para o custo variável")
+    plt.legend()
+    plt.show()
