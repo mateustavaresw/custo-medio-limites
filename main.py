@@ -36,3 +36,7 @@ else:
     plt.title("Convergência do custo médio para o custo variável")
     plt.legend()
     plt.show()
+    print(f"\nInterpretação: conforme a empresa aumenta a produção, o custo médio por unidade")
+    print(f"cai e se aproxima de R$ {float(limite):.2f} (o custo variável), mas nunca fica abaixo disso.")
+    print(f"Isso mostra que, a partir de uma certa escala de produção, ganhar eficiência com volume")
+    print(f"tem um limite — o custo fixo já foi todo 'diluído', e o que resta é só o custo por unidade.")
