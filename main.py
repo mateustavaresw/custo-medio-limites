@@ -19,3 +19,9 @@ else:
     print(f"Conforme a produção cresce infinitamente, o custo médio se aproxima de: {limite}")
     print("O custo total é: ", custo_total(x,cf,cv))
     print("O custo médio é: ", custo_medio(x,cf,cv))
+
+    quantidades = [1, 10, 100, 1000, 10000]
+    print("Simulando com diferentes quantidades produzidas:")
+    for x_teste in quantidades:
+        resultado = custo_medio(x_teste, cf, cv)
+        print(f"Quantidade: {x_teste:>7}, Custo Médio: {resultado:.2f}")
